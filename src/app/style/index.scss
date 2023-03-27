@@ -1,0 +1,22 @@
+$black: #111111;
+$dark: #3f4e65;
+$accent: #ffc85e;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Inter", sans-serif;
+  color: $dark;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
