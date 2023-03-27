@@ -1,2 +1,5 @@
 export { Container } from "./ui/Container"
 export { colors } from "./constants"
+export { Logo } from "./ui/Logo"
+export { Button } from "./ui/Button"
+export { Input } from "./ui/Input"
