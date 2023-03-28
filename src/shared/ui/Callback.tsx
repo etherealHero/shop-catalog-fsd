@@ -1,15 +1,15 @@
 import React from "react"
-import serviceImg from "@/shared/assets/images/service.png"
 import styled from "styled-components"
 import { colors } from "@/shared/constants"
 
 type Props = {
   style?: React.CSSProperties
+  img?: string
 }
 
-const Service = ({ style }: Props) => {
+const Callback = ({ style, img }: Props) => {
   return (
-    <ServiceStyled href="tel:+77774900091" style={style}>
+    <CallbackStyled href="tel:+77774900091" style={style} img={img}>
       <b style={{ color: colors.black }}>+7 (777) 490-00-91</b>
       <br />
       <span style={{ fontWeight: 300, fontSize: 12 }}>
@@ -17,15 +17,15 @@ const Service = ({ style }: Props) => {
       </span>
       <br />
       <u style={{ fontSize: 10 }}>Заказать звонок</u>
-      <img src={serviceImg} alt="service" />
-    </ServiceStyled>
+      {img && <img src={img} alt="Callback" />}
+    </CallbackStyled>
   )
 }
 
-const ServiceStyled = styled.a`
+const CallbackStyled = styled.a<Props>`
   text-align: end;
   position: relative;
-  padding-right: 84px;
+  padding-right: ${(props) => (props.img ? "84px" : "0")};
   width: 242px;
 
   flex-shrink: 0;
@@ -37,4 +37,4 @@ const ServiceStyled = styled.a`
   }
 `
 
-export { Service }
+export { Callback }

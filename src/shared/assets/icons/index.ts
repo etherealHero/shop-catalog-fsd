@@ -7,6 +7,7 @@ import logoIcon from "./logo.svg"
 import mailIcon from "./mail.svg"
 import pinIcon from "./pin.svg"
 import searchIcon from "./search.svg"
+import phoneIcon from "./phone.svg"
 
 export {
   menuIcon,
@@ -18,4 +19,5 @@ export {
   mailIcon,
   pinIcon,
   searchIcon,
+  phoneIcon,
 }

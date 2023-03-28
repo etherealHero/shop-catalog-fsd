@@ -1,35 +1,20 @@
 import { colors, device } from "@/shared/constants"
 import styled from "styled-components"
 
-type Props = {}
+type Props = {
+  title: string
+  to?: string
+}
 
-const Nav = (props: Props) => {
+const NavItem = ({ title, to }: Props) => {
   return (
-    <nav>
-      <NavList>
-        <NavItem>
-          <NavLink href="#">О компании</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href="#">Доставка и оплата</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href="#">Возврат</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href="#">Контакты</NavLink>
-        </NavItem>
-      </NavList>
-    </nav>
+    <NavItemStyled>
+      <NavLink href={to || "#"}>{title}</NavLink>
+    </NavItemStyled>
   )
 }
 
-const NavList = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 30px;
-`
-const NavItem = styled.li`
+const NavItemStyled = styled.li`
   position: relative;
   flex-shrink: 0;
 
@@ -66,4 +51,4 @@ const NavLink = styled.a`
   }
 `
 
-export { Nav }
+export { NavItem }

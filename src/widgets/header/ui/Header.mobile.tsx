@@ -1,8 +1,22 @@
 import styled from "styled-components"
 
 import { Cart } from "@/entities"
-import { Button, Container, Logo, Separator } from "@/shared"
-import { catalogIcon, menuIcon, searchIcon } from "@/shared/assets/icons"
+import {
+  Button,
+  Contact,
+  ContactList,
+  Container,
+  Logo,
+  Separator,
+} from "@/shared"
+import {
+  catalogIcon,
+  mailIcon,
+  menuIcon,
+  phoneIcon,
+  pinIcon,
+  searchIcon,
+} from "@/shared/assets/icons"
 import { colors, device } from "@/shared/constants"
 import { useMedia } from "@/shared/lib/hooks/useMedia"
 
@@ -43,7 +57,35 @@ const Header = () => {
           Поиск
         </Button>
       </HeaderWrapper>
-      <Container>lol</Container>
+      <Container>
+        <ContactList style={{ paddingTop: 20 }}>
+          <Contact
+            title="г. Кокчетав, ул. Ж. Ташенова 129Б"
+            subtitle="(Рынок Восточный)"
+            icon={pinIcon}
+          />
+          <Contact
+            title="opt.sultan@mail.ru"
+            subtitle="На связи в любое время"
+            icon={mailIcon}
+          />
+          <Contact
+            title="Отдел продаж"
+            subtitle="+7 (777) 490-00-91"
+            icon={phoneIcon}
+          />
+          <span
+            style={{
+              fontWeight: 300,
+              fontSize: 12,
+              marginLeft: 32,
+              marginTop: "-10px",
+            }}
+          >
+            время работы: 9:00-20:00
+          </span>
+        </ContactList>
+      </Container>
     </>
   )
 }

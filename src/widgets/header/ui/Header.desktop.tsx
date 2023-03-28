@@ -1,13 +1,28 @@
 import styled from "styled-components"
 
 import { Cart } from "@/entities"
-import { Button, Container, Input, Logo, Separator } from "@/shared"
-import { catalogIcon, downloadIcon, searchIcon } from "@/shared/assets/icons"
+import {
+  Button,
+  Callback,
+  Contact,
+  ContactList,
+  Container,
+  Input,
+  Logo,
+  NavItem,
+  NavList,
+  Separator,
+} from "@/shared"
+import {
+  catalogIcon,
+  downloadIcon,
+  mailIcon,
+  pinIcon,
+  searchIcon,
+} from "@/shared/assets/icons"
+import callbackImg from "@/shared/assets/images/callback.png"
 import { useMedia } from "@/shared/lib/hooks/useMedia"
 
-import { Contacts } from "./Contacts"
-import { Nav } from "./Nav"
-import { Service } from "./Service"
 import { colors, device } from "@/shared/constants"
 
 const Header = () => {
@@ -18,8 +33,24 @@ const Header = () => {
       <HeaderTopWrapper>
         <Container>
           <HeaderTop>
-            <Contacts />
-            <Nav />
+            <ContactList>
+              <Contact
+                title="г. Кокчетав, ул. Ж. Ташенова 129Б"
+                subtitle="(Рынок Восточный)"
+                icon={pinIcon}
+              />
+              <Contact
+                title="opt.sultan@mail.ru"
+                subtitle="На связи в любое время"
+                icon={mailIcon}
+              />
+            </ContactList>
+            <NavList>
+              <NavItem title="О компании" />
+              <NavItem title="Доставка и оплата" />
+              <NavItem title="Возврат" />
+              <NavItem title="Контакты" />
+            </NavList>
           </HeaderTop>
         </Container>
       </HeaderTopWrapper>
@@ -36,7 +67,7 @@ const Header = () => {
             />
           </Button>
           <Input icon={searchIcon} style={{ gridArea: "search" }} />
-          <Service style={{ gridArea: "service" }} />
+          <Callback img={callbackImg} style={{ gridArea: "service" }} />
           {!isLaptopL && <Separator />}
           <Button style={{ gridArea: "price" }}>
             Прайс-лист
