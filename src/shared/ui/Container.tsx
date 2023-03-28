@@ -4,10 +4,11 @@ import { device } from "../constants"
 
 type Props = {
   children: React.ReactNode
+  style?: React.CSSProperties
 }
 
-const Container: React.FC<Props> = ({ children }) => {
-  return <ContainerStyled>{children}</ContainerStyled>
+const Container: React.FC<Props> = ({ children, style }) => {
+  return <ContainerStyled style={style}>{children}</ContainerStyled>
 }
 
 const ContainerStyled = styled.div`

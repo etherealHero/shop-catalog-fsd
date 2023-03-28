@@ -20,7 +20,7 @@ const NavListStyled = styled.ul<Props>`
   display: flex;
   flex-wrap: wrap;
   flex-direction: ${(props) => (props.vertical ? "column" : "row")};
-  row-gap: 20px;
+  row-gap: 8px;
 `
 
 export { NavList }

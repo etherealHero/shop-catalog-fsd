@@ -39,6 +39,7 @@ const NavItemStyled = styled.li`
 const NavLink = styled.a`
   padding: 6px;
   margin: 0 30px;
+  display: inline-block;
 
   transition: 0.1s color ease;
 
@@ -48,6 +49,10 @@ const NavLink = styled.a`
 
   @media ${device.laptopL} {
     margin: 0 10px;
+  }
+
+  @media ${device.mobileL} {
+    margin: 0 0 0 -6px;
   }
 `
 

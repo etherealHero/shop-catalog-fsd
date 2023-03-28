@@ -5,17 +5,29 @@ import { colors, device } from "../constants"
 type Props = {
   children: React.ReactNode
   style?: React.CSSProperties
+  className?: string
+  onClick?: () => void
+  href?: string
 }
 
-const Button = ({ children, style }: Props) => {
-  return (
-    <ButtonStyled href="#" style={style}>
+const Button = React.forwardRef(
+  (
+    { children, style, onClick, href, className }: Props,
+    ref?: React.LegacyRef<HTMLAnchorElement>
+  ) => (
+    <a
+      href={href || "#"}
+      style={style}
+      onClick={onClick}
+      ref={ref}
+      className={className}
+    >
       {children}
-    </ButtonStyled>
+    </a>
   )
-}
+)
 
-const ButtonStyled = styled.a`
+const ButtonStyled = styled(Button)`
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -34,4 +46,4 @@ const ButtonStyled = styled.a`
   }
 `
 
-export { Button }
+export { ButtonStyled as Button }

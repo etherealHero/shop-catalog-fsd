@@ -8,6 +8,7 @@ import mailIcon from "./mail.svg"
 import pinIcon from "./pin.svg"
 import searchIcon from "./search.svg"
 import phoneIcon from "./phone.svg"
+import phoneFilledIcon from "./phone-filled.svg"
 
 export {
   menuIcon,
@@ -20,4 +21,5 @@ export {
   pinIcon,
   searchIcon,
   phoneIcon,
+  phoneFilledIcon,
 }

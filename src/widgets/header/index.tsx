@@ -1,4 +1,4 @@
-import { useMedia } from "@/shared/lib/hooks/useMedia"
+import { useMedia } from "@/shared/lib/hooks"
 import { HeaderDesktop } from "./ui/Header.desktop"
 import { HeaderMobile } from "./ui/Header.mobile"
 

@@ -1,4 +1,4 @@
-import { device, media } from "@/shared/constants"
+import { device } from "@/shared/constants"
 import { useMediaQuery } from "react-responsive"
 
 const useMedia = () => ({

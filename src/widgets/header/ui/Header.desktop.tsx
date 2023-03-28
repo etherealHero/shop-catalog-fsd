@@ -21,15 +21,15 @@ import {
   searchIcon,
 } from "@/shared/assets/icons"
 import callbackImg from "@/shared/assets/images/callback.png"
-import { useMedia } from "@/shared/lib/hooks/useMedia"
 
 import { colors, device } from "@/shared/constants"
+import { useMedia } from "@/shared/lib/hooks"
 
 const Header = () => {
   const { isLaptopL, isTablet } = useMedia()
 
   return (
-    <>
+    <header>
       <HeaderTopWrapper>
         <Container>
           <HeaderTop>
@@ -85,7 +85,7 @@ const Header = () => {
           />
         </HeaderWrapper>
       </Container>
-    </>
+    </header>
   )
 }
 
@@ -100,7 +100,7 @@ const HeaderWrapper = styled.div`
   @media ${device.tablet} {
     display: grid;
     justify-content: space-between;
-    row-gap: 10px;
+    row-gap: 20px;
 
     grid-template-areas:
       "logo logo service service service service price"

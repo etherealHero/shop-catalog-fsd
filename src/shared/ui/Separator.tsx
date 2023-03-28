@@ -14,7 +14,7 @@ const SeparatorStyled = styled.div`
   height: 50px;
   width: 0;
 
-  border-right: 1px dashed ${colors.dark};
+  border: 1px dashed ${colors.dark};
   opacity: 0.1;
 `
 
