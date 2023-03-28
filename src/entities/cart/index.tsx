@@ -1,24 +1,28 @@
 import React from "react"
 import cartIcon from "@/shared/assets/icons/cart.svg"
-import { colors } from "@/shared"
 import styled from "styled-components"
+import { colors } from "@/shared/constants"
 
 type Props = {
   count: number
+  style?: React.CSSProperties
+  compact?: boolean
 }
 
-const Cart = ({ count }: Props) => {
+const Cart = ({ count, style, compact }: Props) => {
   return (
-    <CartStyled href="#">
-      <div style={{ position: "relative" }}>
+    <CartStyled href="#" style={style}>
+      <div style={{ position: "relative", marginTop: 10 }}>
         <img src={cartIcon} alt="cart" />
         <Badge>{count}</Badge>
       </div>
 
-      <div style={{ fontWeight: 300 }}>
-        <p>Корзина</p>
-        <b style={{ color: colors.black, fontWeight: 600 }}>12 478 ₸ </b>
-      </div>
+      {!compact && (
+        <div style={{ fontWeight: 300 }}>
+          <p>Корзина</p>
+          <b style={{ color: colors.black, fontWeight: 600 }}>12 478 ₸ </b>
+        </div>
+      )}
     </CartStyled>
   )
 }
@@ -27,6 +31,8 @@ const CartStyled = styled.a`
   display: flex;
   align-items: center;
   column-gap: 24px;
+
+  flex-shrink: 0;
 `
 
 const Badge = styled.div`

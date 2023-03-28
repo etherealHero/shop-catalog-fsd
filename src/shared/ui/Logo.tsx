@@ -1,11 +1,13 @@
 import LogoIcon from "../assets/icons/logo.svg"
 import React from "react"
 
-type Props = {}
+type Props = {
+  style?: React.CSSProperties
+}
 
-const Logo = (props: Props) => {
+const Logo = ({ style }: Props) => {
   return (
-    <a href="#">
+    <a href="#" style={style}>
       <img src={LogoIcon} alt="Logo" />
     </a>
   )

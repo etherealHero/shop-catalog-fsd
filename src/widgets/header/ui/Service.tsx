@@ -1,13 +1,15 @@
 import React from "react"
 import serviceImg from "@/shared/assets/images/service.png"
 import styled from "styled-components"
-import { colors } from "@/shared"
+import { colors } from "@/shared/constants"
 
-type Props = {}
+type Props = {
+  style?: React.CSSProperties
+}
 
-const Service = (props: Props) => {
+const Service = ({ style }: Props) => {
   return (
-    <ServiceStyled href="tel:+77774900091">
+    <ServiceStyled href="tel:+77774900091" style={style}>
       <b style={{ color: colors.black }}>+7 (777) 490-00-91</b>
       <br />
       <span style={{ fontWeight: 300, fontSize: 12 }}>
@@ -24,6 +26,9 @@ const ServiceStyled = styled.a`
   text-align: end;
   position: relative;
   padding-right: 84px;
+  width: 242px;
+
+  flex-shrink: 0;
 
   img {
     position: absolute;

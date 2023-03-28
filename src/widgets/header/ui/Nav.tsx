@@ -1,4 +1,4 @@
-import { colors } from "@/shared"
+import { colors, device } from "@/shared/constants"
 import styled from "styled-components"
 
 type Props = {}
@@ -24,23 +24,14 @@ const Nav = (props: Props) => {
   )
 }
 
-const NavLink = styled.a`
-  padding: 6px;
-  margin: 0 30px;
-
-  transition: 0.1s color ease;
-
-  :hover {
-    color: ${colors.accent};
-  }
-`
-
 const NavList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
 `
-
 const NavItem = styled.li`
   position: relative;
+  flex-shrink: 0;
 
   :last-child a {
     margin-right: 0;
@@ -57,6 +48,21 @@ const NavItem = styled.li`
     display: block;
     border-right: 1px dashed ${colors.dark};
     opacity: 0.1;
+  }
+`
+
+const NavLink = styled.a`
+  padding: 6px;
+  margin: 0 30px;
+
+  transition: 0.1s color ease;
+
+  :hover {
+    color: ${colors.accent};
+  }
+
+  @media ${device.laptopL} {
+    margin: 0 10px;
   }
 `
 

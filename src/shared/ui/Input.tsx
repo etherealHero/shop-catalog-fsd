@@ -4,13 +4,15 @@ import { colors } from "../constants"
 
 type Props = {
   icon?: string
+  style?: React.CSSProperties
 }
 
-const Input = ({ icon }: Props) => {
-  if (!icon) return <InputStyled type="text" placeholder="Поиск..." />
+const Input = ({ icon, style }: Props) => {
+  if (!icon)
+    return <InputStyled type="text" placeholder="Поиск..." style={style} />
 
   return (
-    <div style={{ position: "relative" }}>
+    <div style={{ position: "relative", ...style }}>
       <InputStyled
         type="text"
         placeholder="Поиск..."
@@ -30,6 +32,9 @@ const InputStyled = styled.input`
   outline: none;
   border: 0;
   height: 59px;
+
+  width: 100%;
+  min-width: 0;
 
   ::placeholder {
     color: #5c6370;

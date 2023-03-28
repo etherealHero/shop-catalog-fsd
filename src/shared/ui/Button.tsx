@@ -1,13 +1,18 @@
 import React from "react"
 import styled from "styled-components"
-import { colors } from "../constants"
+import { colors, device } from "../constants"
 
 type Props = {
   children: React.ReactNode
+  style?: React.CSSProperties
 }
 
-const Button = ({ children }: Props) => {
-  return <ButtonStyled href="#">{children}</ButtonStyled>
+const Button = ({ children, style }: Props) => {
+  return (
+    <ButtonStyled href="#" style={style}>
+      {children}
+    </ButtonStyled>
+  )
 }
 
 const ButtonStyled = styled.a`
@@ -21,6 +26,12 @@ const ButtonStyled = styled.a`
 
   font-weight: 700;
   color: #fff;
+
+  flex-shrink: 0;
+
+  @media ${device.laptopL} {
+    padding: 22px 32px;
+  }
 `
 
 export { Button }
