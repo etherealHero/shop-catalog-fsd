@@ -8,7 +8,22 @@
 
   font-family: "Inter", sans-serif;
   font-size: 14px;
+  color: inherit;
+}
+
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  min-height: 100vh;
+  margin: 0;
+
   color: $dark;
+}
+
+main {
+  align-self: start;
+  border: 1px dotted red;
 }
 
 a {

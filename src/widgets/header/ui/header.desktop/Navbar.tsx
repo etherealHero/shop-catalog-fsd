@@ -1,6 +1,6 @@
 import { Contact, ContactList, Container, NavItem, NavList } from "@/shared"
 import { mailIcon, pinIcon } from "@/shared/assets/icons"
-import { colors } from "@/shared/constants"
+import { colors, device } from "@/shared/constants"
 import styled from "styled-components"
 
 type Props = {}
@@ -23,10 +23,10 @@ const Navbar = (props: Props) => {
             />
           </ContactList>
           <NavList>
-            <NavItem title="О компании" />
-            <NavItem title="Доставка и оплата" />
-            <NavItem title="Возврат" />
-            <NavItem title="Контакты" />
+            <NavItemStyled title="О компании" />
+            <NavItemStyled title="Доставка и оплата" />
+            <NavItemStyled title="Возврат" />
+            <NavItemStyled title="Контакты" />
           </NavList>
         </NavbarInner>
       </Container>
@@ -55,6 +55,39 @@ const NavbarInner = styled.div`
   align-items: center;
 
   column-gap: 10px;
+`
+
+const NavItemStyled = styled(NavItem)`
+  position: relative;
+
+  :last-child a {
+    margin-right: 0;
+  }
+
+  :not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0px;
+    height: 29px;
+    width: 0;
+
+    display: block;
+    border-right: 1px dashed ${colors.dark};
+    opacity: 0.1;
+  }
+
+  a {
+    margin: 0 30px;
+
+    @media ${device.laptopL} {
+      margin: 0 10px;
+    }
+
+    @media ${device.mobileL} {
+      margin: 0 0 0 -6px;
+    }
+  }
 `
 
 export { Navbar }

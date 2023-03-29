@@ -1,0 +1,51 @@
+@import "@/app/style";
+
+.wrapper {
+  background-color: $dark;
+  color: #fff;
+
+  padding-top: 71px;
+  padding-bottom: 116px;
+
+  @media ($mobileL) {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
+  @media ($mobileS) {
+    padding-top: 20px;
+    padding-bottom: 15px;
+  }
+}
+
+.container {
+  &Desktop {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
+    gap: 40px;
+  }
+
+  &Mobile {
+    display: grid;
+    grid-template-columns: 130px 170px;
+    grid-template-areas:
+      "logo price"
+      "subscribe subscribe"
+      "menu category"
+      "contacts social";
+    column-gap: 10px;
+    row-gap: 35px;
+  }
+}
+
+.p {
+  font-size: 16px;
+  line-height: 150%;
+  margin: 15px 0 45px;
+
+  &Subscribe {
+    font-size: 12px;
+    margin-bottom: 14px;
+  }
+}

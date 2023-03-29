@@ -1,6 +1,6 @@
 import { useMedia } from "@/shared/lib/hooks"
-import { HeaderDesktop } from "./ui/Header.desktop"
-import { HeaderMobile } from "./ui/Header.mobile"
+import { HeaderDesktop } from "./ui/header.desktop"
+import { HeaderMobile } from "./ui/header.mobile"
 
 const Header = () => {
   const { isMobileL } = useMedia()

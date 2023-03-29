@@ -5,17 +5,24 @@ import { colors } from "../constants"
 type Props = {
   icon?: string
   style?: React.CSSProperties
+  placeholder?: string
 }
 
-const Input = ({ icon, style }: Props) => {
+const Input = ({ icon, style, placeholder }: Props) => {
   if (!icon)
-    return <InputStyled type="text" placeholder="Поиск..." style={style} />
+    return (
+      <InputStyled
+        type="text"
+        placeholder={placeholder || "Поиск..."}
+        style={style}
+      />
+    )
 
   return (
     <div style={{ position: "relative", ...style }}>
       <InputStyled
         type="text"
-        placeholder="Поиск..."
+        placeholder={placeholder || "Поиск..."}
         style={{ paddingRight: 60 }}
       />
       <SubmitButton href="#">

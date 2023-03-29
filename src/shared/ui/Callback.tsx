@@ -4,13 +4,16 @@ import { colors } from "@/shared/constants"
 
 type Props = {
   style?: React.CSSProperties
+  titleColor?: string
   img?: string
 }
 
-const Callback = ({ style, img }: Props) => {
+const Callback = ({ style, img, titleColor }: Props) => {
   return (
     <CallbackStyled href="tel:+77774900091" style={style} img={img}>
-      <b style={{ color: colors.black }}>+7 (777) 490-00-91</b>
+      <b style={{ color: `${titleColor || colors.black}` }}>
+        +7 (777) 490-00-91
+      </b>
       <br />
       <span style={{ fontWeight: 300, fontSize: 12 }}>
         время работы: 9:00-20:00
@@ -23,10 +26,8 @@ const Callback = ({ style, img }: Props) => {
 }
 
 const CallbackStyled = styled.a<Props>`
-  text-align: end;
   position: relative;
   padding-right: ${(props) => (props.img ? "84px" : "0")};
-  width: 242px;
 
   flex-shrink: 0;
 

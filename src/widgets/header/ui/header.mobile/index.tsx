@@ -3,7 +3,7 @@ import { Menu } from "./Menu"
 import { Header } from "./Header"
 
 const HeaderMobile = () => {
-  const { ref, isShow, setIsShow, toggler } = useOutside(true)
+  const { ref, isShow, setIsShow, toggler } = useOutside(false)
 
   return (
     <>

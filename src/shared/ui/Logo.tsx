@@ -1,14 +1,15 @@
-import LogoIcon from "../assets/icons/logo.svg"
 import React from "react"
+import { logoAltIcon, logoIcon } from "../assets/icons"
 
 type Props = {
   style?: React.CSSProperties
+  invert?: boolean
 }
 
-const Logo = ({ style }: Props) => {
+const Logo = ({ style, invert }: Props) => {
   return (
     <a href="#" style={style}>
-      <img src={LogoIcon} alt="Logo" />
+      <img src={invert ? logoAltIcon : logoIcon} alt="Logo" />
     </a>
   )
 }

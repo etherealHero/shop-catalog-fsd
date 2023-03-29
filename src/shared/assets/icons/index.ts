@@ -9,6 +9,12 @@ import pinIcon from "./pin.svg"
 import searchIcon from "./search.svg"
 import phoneIcon from "./phone.svg"
 import phoneFilledIcon from "./phone-filled.svg"
+import arrowRightIcon from "./arrow-right.svg"
+import logoAltIcon from "./logo-alt.svg"
+import masterCardIcon from "./master-card.svg"
+import telegramIcon from "./telegram.svg"
+import visaIcon from "./visa.svg"
+import whatsupIcon from "./whatsup.svg"
 
 export {
   menuIcon,
@@ -22,4 +28,10 @@ export {
   searchIcon,
   phoneIcon,
   phoneFilledIcon,
+  arrowRightIcon,
+  logoAltIcon,
+  masterCardIcon,
+  telegramIcon,
+  visaIcon,
+  whatsupIcon,
 }

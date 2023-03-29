@@ -3,16 +3,17 @@ import { colors } from "../constants"
 
 type Props = {
   title: string
+  titleColor?: string
   subtitle: string
   icon?: string
 }
 
-const Contact = ({ title, subtitle, icon }: Props) => {
+const Contact = ({ title, titleColor, subtitle, icon }: Props) => {
   return (
     <ContactStyled href="#">
       {icon && <img src={icon} alt="contact" />}
       <span>
-        <b style={{ color: colors.black }}>{title}</b>
+        <b style={{ color: `${titleColor || colors.black}` }}>{title}</b>
         <br />
         {subtitle}
       </span>

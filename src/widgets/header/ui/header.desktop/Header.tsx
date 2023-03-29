@@ -20,7 +20,15 @@ const Header = () => {
           <img src={catalogIcon} alt="catalogIcon" style={{ marginLeft: 12 }} />
         </Button>
         <Input icon={searchIcon} style={{ gridArea: "search" }} />
-        <Callback img={callbackImg} style={{ gridArea: "service" }} />
+        <Callback
+          img={callbackImg}
+          style={{
+            gridArea: "service",
+            textAlign: "end",
+            justifySelf: "center",
+            width: 242,
+          }}
+        />
         {!isLaptopL && <Separator />}
         <Button style={{ gridArea: "price" }}>
           Прайс-лист
