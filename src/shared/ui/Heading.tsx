@@ -1,18 +1,21 @@
 import React from "react"
 import styled from "styled-components"
+import { colors } from "../constants"
 
 type Props = {
-  children: React.ReactNode
+  title: string
   style?: React.CSSProperties
 }
 
-const Heading = ({ children, style }: Props) => {
-  return <HeadingStyled style={style}>{children}</HeadingStyled>
+const Heading = ({ title, style }: Props) => {
+  return <HeadingStyled style={style}>{title}</HeadingStyled>
 }
 
-const HeadingStyled = styled.h3`
-  font-weight: 600;
-  font-size: 20px;
+const HeadingStyled = styled.h1`
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 40px;
+  color: ${colors.black};
 `
 
 export { Heading }
