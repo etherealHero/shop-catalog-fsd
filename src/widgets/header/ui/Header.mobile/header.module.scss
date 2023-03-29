@@ -1,0 +1,64 @@
+@import "@/app/style";
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-items: stretch;
+  width: 100%;
+  column-gap: 0;
+  padding: 0;
+
+  position: relative;
+  background-color: #fff;
+
+  a {
+    flex: 1;
+    background-color: #fff;
+    color: $dark;
+    border-radius: 0;
+
+    img {
+      filter: invert(1);
+    }
+  }
+
+  ::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    border-bottom: 1px solid $dark;
+    opacity: 0.1;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  column-gap: 10px;
+}
+
+.topWrapper {
+  background-color: #fff;
+  position: relative;
+  padding: 10px 14px;
+
+  ::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    border-bottom: 1px solid $dark;
+    opacity: 0.05;
+  }
+
+  @media ($mobileS) {
+    padding: 4px 10px;
+  }
+}

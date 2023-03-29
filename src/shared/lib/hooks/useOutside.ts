@@ -1,13 +1,13 @@
 import { Dispatch, SetStateAction, useEffect, useRef, useState } from "react"
 
-type TypeOut = {
+export type UseOutSideTypes = {
   ref: any
   toggler: any
   isShow: boolean
   setIsShow: Dispatch<SetStateAction<boolean>>
 }
 
-export const useOutside = (initialIsVisible: boolean): TypeOut => {
+export const useOutside = (initialIsVisible: boolean): UseOutSideTypes => {
   const [isShow, setIsShow] = useState(initialIsVisible)
   const ref = useRef<HTMLElement>(null)
   const toggler = useRef<HTMLElement>(null)
