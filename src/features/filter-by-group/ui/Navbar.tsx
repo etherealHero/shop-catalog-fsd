@@ -2,20 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import { breakHalfList } from "../lib/break-half-list"
 
-const data = [
-  "Эпиляция и депиляция",
-  "Средства для ванны и душа",
-  "Скрабы, пилинги и пр.",
-  "Мочалки и губки для тела",
-  "Кремы, лосьоны, масла",
-  "Интимный уход",
-  "Дезодоранты, антиперспиранты",
-  "Гели для душа",
-]
+import { data } from "../lib/fetch-data"
 
 type Props = {}
 
-const FilterByGroup = (props: Props) => {
+const Navbar = (props: Props) => {
   return (
     <Wrapper>
       <FilterByGroupStyled>
@@ -64,4 +55,4 @@ const FilterItem = styled.a`
   line-height: 17px;
 `
 
-export { FilterByGroup }
+export { Navbar }

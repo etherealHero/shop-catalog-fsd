@@ -1,6 +1,6 @@
-import { Breadcrumbs, FilterByGroup, SortBy } from "@/features"
+import { Breadcrumbs, FilterByGroupNavbar, SortBy } from "@/features"
 import { Container, Heading } from "@/shared"
-import { Footer, Header } from "@/widgets"
+import { Footer, Header, Sidebar } from "@/widgets"
 import React from "react"
 
 type Props = {}
@@ -22,9 +22,15 @@ const Home = (props: Props) => {
             <Heading title="Косметика и гигиена" />
             <SortBy />
           </div>
-          <FilterByGroup />
-          <div style={{ display: "grid", gridTemplateColumns: "240px 1fr" }}>
-            <div>Sidebar</div>
+          <FilterByGroupNavbar />
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "240px 1fr",
+              columnGap: 108,
+            }}
+          >
+            <Sidebar />
             <div>Catalog</div>
           </div>
         </Container>

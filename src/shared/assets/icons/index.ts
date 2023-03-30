@@ -15,6 +15,7 @@ import masterCardIcon from "./master-card.svg"
 import telegramIcon from "./telegram.svg"
 import visaIcon from "./visa.svg"
 import whatsupIcon from "./whatsup.svg"
+import trashIcon from "./trash.svg"
 
 export {
   menuIcon,
@@ -34,4 +35,5 @@ export {
   telegramIcon,
   visaIcon,
   whatsupIcon,
+  trashIcon,
 }

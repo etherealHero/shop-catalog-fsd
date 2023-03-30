@@ -1,3 +1,5 @@
 export { Breadcrumbs } from "./breadcrumbs"
 export { SortBy } from "./sort-by"
-export { FilterByGroup } from "./filter-by-group/ui"
+export { FilterByGroupNavbar, FilterByGroupList } from "./filter-by-group/"
+export { PriceFilter } from "./price-filter"
+export { CheckboxFilter } from "./checkbox-filter"
